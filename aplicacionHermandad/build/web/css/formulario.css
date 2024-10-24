@@ -1,0 +1,76 @@
+/* formulario.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario en la página */
+    background: white; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+label {
+    display: block; /* Hace que el label ocupe toda la línea */
+    margin: 10px 0 5px; /* Margen alrededor del label */
+    font-weight: bold; /* Negrita para los labels */
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%; /* Hace que el input ocupe el 100% del ancho */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Margen debajo de cada input */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: border-color 0.3s; /* Transición para el color del borde */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #007bff; /* Cambia el borde al azul al enfocar */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+a {
+    display: inline-block; /* Hace que el enlace sea un bloque en línea */
+    margin-top: 20px; /* Margen en la parte superior */
+    text-align: center; /* Centra el texto del enlace */
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para el enlace */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}

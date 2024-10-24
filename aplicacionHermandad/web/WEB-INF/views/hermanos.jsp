@@ -4,8 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Hermandad del Cautivo de Almonte</title>
-        
-        <link href="/aplicacionHermandad/css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="${pageContext.request.contextPath}/css/hermanos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <nav> | <a href="/aplicacionHermandad/hermano/new">Crear Nueva Entrada</a> | </nav>

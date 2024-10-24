@@ -34,7 +34,7 @@ public class IniciarSesionController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Cargar el formulario de inicio de sesión
+        // Mostrar la página de inicio de sesión
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/inicio.jsp");
         dispatcher.forward(request, response);
     }
@@ -48,15 +48,16 @@ public class IniciarSesionController extends HttpServlet {
         String password = request.getParameter("password");
 
         // Validar las credenciales del usuario
-        if (USERNAME.equals(username) && PASSWORD.equals(password)) {
-            // Inicio de sesión exitoso: crear una sesión y redirigir a la página de bienvenida
+        if ("admin".equals(username) && "admin".equals(password)) {
+            // Si el inicio de sesión es correcto, crear una sesión y redirigir a la página de hermanos
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
 
-            // Redirigir al dashboard o página principal
-            response.sendRedirect(request.getContextPath() + "WEB-INF/views/hermanos.jsp");
+            // Redirigir a hermanos.jsp
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/hermanos.jsp");
+            dispatcher.forward(request, response);
         } else {
-            // Si las credenciales son incorrectas, redirigir al formulario de nuevo con un mensaje de error
+            // Si las credenciales son incorrectas, redirigir al formulario con un mensaje de error
             request.setAttribute("errorMessage", "Usuario o contraseña incorrectos.");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/inicio.jsp");
             dispatcher.forward(request, response);
